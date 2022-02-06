@@ -27,4 +27,8 @@ def save_notes(request, pk):
     lesson.save()
     return JsonResponse({"status": 'Success'}) 
 
+class NoteList(ListView):
+    model = Lesson 
+    template_name= 'myapp/note_list.html'
+
 
